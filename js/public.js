@@ -26,8 +26,6 @@ $("#link_wx").hover(
 $("#gift_content").click(function(){
 	$("#gift_content a").css("border","1px solid black")
 })
-
-
 //点击每个li
 
 $("#tow li").click(function () { 
