@@ -1,0 +1,73 @@
+.topBox{
+    width:100%;
+    height: 90px;
+    margin: 0 auto;
+    color:white;
+    div{
+       float: left; 
+    }
+}
+#linkA{
+    width: 55px;
+    height:55px;
+    text-align: center;
+    border-radius: 50%;
+    float: left;
+    margin-top: 5px;
+    background-image: url(../img/ico.png);
+}
+header{
+    div:nth-child(1){
+        float: left;
+        h{
+        color: #000000;
+        }
+    }
+     div:nth-child(2){
+        float:right;
+        a{
+        color: #000000;
+        }
+    }
+}
+#contBox {
+      width: 100%;
+      height: 766px;
+      background: #f5f5f5 ;
+      clear: both;
+     
+  }
+
+#talkBox {
+    width:1210px;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-right: 8px;
+    font-size: 12px;
+    color: #666666;
+    background: #f5f5f5 ;
+     div:nth-child(1){
+          float: left;
+      }
+       div:nth-child(2){
+          float: right;
+      }
+       a{
+           &:hover{
+              color: #d93732; 
+           }
+       }
+    }
+//#talkBox a {
+//  display: inline-block;
+//  width: 86px;
+//  height: 18px;
+//  text-align: center;
+//  line-height: 18px;
+//  border-radius: 10px;
+//  color: #666666;
+//  margin-left: 11px;
+//  border: 2px solid #979795; }
+//  #talkBox a:hover {
+//     }

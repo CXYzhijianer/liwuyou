@@ -39,11 +39,11 @@ img{
 	z-index: 4; 
 	width:130px; 
 	background:#fff9aa;
-	 position:absolute; 
-	 left:0px;
-	 top:70px;
+	 position:fixed; 
+	 left:74px;
+	 top:94px;
 	 display:none; 
-	 z-index: 4;
+	 z-index: 100;
 	}
 .oneli:hover .two{
 	 z-index: 4;

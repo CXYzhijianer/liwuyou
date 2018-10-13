@@ -19,10 +19,10 @@
 #contBox{
 	width: 100%;
 	height: 766px;
-	background: url(../img/login_bg.jpg) no-repeat center top;
+	background:#f5f5f5 url(../img/login_bg.jpg) no-repeat center top;
 	background-size:100% 100%;
 	clear: both;
-	background: #f5f5f5;
+//	background: #f5f5f5;
 	position: relative;
 }
 
@@ -34,23 +34,19 @@
 	position: absolute;
 	right: 0px;
 	top: 0px;
-}
-#talkBox a{
-	display: inline-block;
-	width:86px;
-	height: 18px;
-	text-align: center;
-	line-height: 18px;
-	border-radius: 10px;
-	color: #666666;
-	margin-left: 11px;
-	border: 2px solid #979795;
-	
-}
-#talkBox a{
-	color:#666666;
-	&:hover{
+	a{
+		display: inline-block;
+		width:86px;
+		height: 18px;
+		text-align: center;
+		line-height: 18px;
+		border-radius: 10px;
+		color: #666666;
+		margin-left: 11px;
+		border: 2px solid #979795;
+		&:hover{
 		color:#d93732;
+		}
 	}
 }
 .logininfo{
@@ -60,14 +56,12 @@
 	position: absolute;
 	right: 59px;
 	top: 105px;
-
-}
-
-.logininfo form{
-	width: 412px;
-	height: 412px;
-	margin:auto;
-	margin:70px 90px;
+	form{
+		width: 412px;
+		height: 412px;
+		margin:auto;
+		margin:70px 90px;
+	}
 }
 .footer_contant{
 	clear: both;
@@ -79,32 +73,29 @@
 	text-align: left;
 	vertical-align: top;
 	line-height:19px;
-}
-.logininfo form div:nth-child(1) b{
-	display: inline-block;
-	font-size: 22px;
-	color: #000;
-	vertical-align: top;
-}
-.logininfo form div:nth-child(1) span{
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 196px;
-	font-size: 12px;
-	color: #666666;
-}
-.logininfo form div:nth-child(1) a{
-	display: inline-block;
-	vertical-align: top;
-	font-size: 12px;
-	color:#666666;
-	&:hover{
-		color:#d93732;
+	b{
+		display: inline-block;
+		font-size: 22px;
+		color: #000;
+		vertical-align: top;
 	}
-
+	span{
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 196px;
+		font-size: 12px;
+		color: #666666;
+	}
+	a{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 12px;
+		color:#333333;
+		&:hover{
+			color:#d93732;
+		}
+	}
 }
-
-
 .logininfo form div:nth-child(2){
 	@include logininfoDiv2and4;
 	border:1px solid #eeeeee;
@@ -125,6 +116,7 @@
 }
 .logininfo form div:nth-child(5){
 	@include widthAndheight;
+
 }
 .logininfo form div:nth-child(6){
 	width: 414px;
@@ -132,27 +124,99 @@
 	background:#d93732;
 	text-align: center;
 	line-height: 50px;
+	input{
+	font-size:14px;
+	color:#fff;
+	padding-top:10px;
+	opacity:1;
+	background:#d93732;
+	}
 }
 .logininfo form div:nth-child(7){
 	@include logininfoWidthAndheight;
 	margin-left: 0px;
 	line-height: 64px;
 	position: relative;
+	color:black;
+		a{
+		color:black;
+			margin-left: 232px;
+			&:hover{
+			color:#d93732;
+		}
+	}
 }
-
 
 .logininfo form div:nth-child(8){
 	@include logininfoWidthAndheight;
 	text-align: center;
 	line-height: 64px;
+	opacity:0.5;
+	background: url(../img/login_line.jpg) repeat-x center center;
+	p{
+		margin-left:130px;
+		width:158px;
+		background:#fff;
+	}
 }
 
 .logininfo form div:nth-child(9){
 	@include logininfoWidthAndheight;
 	text-align: center;
 	line-height: 64px;
-}
+	position:relative;
+	span:nth-child(1){
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+	}
 
+	span:nth-child(2){
+		color: #333333;
+		display: inline-block;
+		position: absolute;
+		left: 8px;
+		top:20px;
+	}
+	a:nth-child(1){
+		display: inline-block;
+		width: 32px;
+		height: 55px;
+		position: absolute;
+		left: 78px;
+		top: 7px;
+		span:nth-child(1){
+			background: url(../img/ico.png) 99px 32px;
+		}
+		span:nth-child(2){
+			left: 8px;
+		}
+
+	}
+	a:nth-child(2){
+		display: inline-block;
+		width: 62px;
+		height: 55px;
+		position: absolute;
+		left:174px;
+		top: 7px;
+		span:nth-child(1){
+			background: url(../img/ico.png) 65px 32px;
+		}
+	}
+	a:nth-child(3){
+		display: inline-block;
+		width: 47px;
+		height: 55px;
+		position: absolute;
+		left:290px;
+		top: 7px;
+		span:nth-child(1){
+			background: url(../img/ico.png) 32px 32px;
+		}
+	}
+}
 #checkbtn{
 	width: 13px;
 	height: 13px;
@@ -161,8 +225,4 @@
 	position: absolute;
 	left:1px;
 	top: 24px;
-}
-.logininfo form div:nth-child(7) a{
-	margin-left: 232px;
-	
 }
