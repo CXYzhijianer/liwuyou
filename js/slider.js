@@ -61,7 +61,7 @@ Slider.prototype.createUI= function(){
 	let $ul = $("<ul></ul>");
 	$ul.css({
 		position:"absolute",
-		left:"520px",
+		left:"600px",
 		bottom:"10px",
 		"list-style":"none",
 		"z-index":2

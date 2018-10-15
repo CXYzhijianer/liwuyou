@@ -2,72 +2,196 @@
     width:100%;
     height: 90px;
     margin: 0 auto;
+    line-height: 90px;
     color:white;
     div{
        float: left; 
     }
 }
+
 #linkA{
     width: 55px;
     height:55px;
     text-align: center;
     border-radius: 50%;
     float: left;
-    margin-top: 5px;
+    margin-top: 18px;
     background-image: url(../img/ico.png);
 }
 header{
     div:nth-child(1){
         float: left;
-        h{
-        color: #000000;
+        span{
+            color: black;
+            font-size: 24px;
+            margin-left: 30px;
         }
+        
     }
-     div:nth-child(2){
+    div:nth-child(2){
         float:right;
         a{
         color: #000000;
+            &:hover{
+                color: #d93732; 
+            }
+        }
+        a:nth-child(3){
+            margin-left: 20px;
         }
     }
 }
-#contBox {
-      width: 100%;
-      height: 766px;
-      background: #f5f5f5 ;
-      clear: both;
-     
-  }
+#contBox1{
+     width: 100%;
+     height: 550px;
+     background: #f5f5f5 ;
+     clear: both;
+    position: relative;
+     margin-bottom: 70px;
+}
 
-#talkBox {
-    width:1210px;
-    height: 60px;
+body{
+//  background: #f5f5f5 ;
+//  overflow: hidden;
+}
+.nav_content{
+    width: 1210px;
+    height: 58px;
+    background: #f5f5f5;
     margin: 0 auto;
-    padding-top: 28px;
-    padding-right: 8px;
     font-size: 12px;
-    color: #666666;
-    background: #f5f5f5 ;
-     div:nth-child(1){
-          float: left;
-      }
-       div:nth-child(2){
-          float: right;
-      }
-       a{
-           &:hover{
-              color: #d93732; 
-           }
-       }
+    line-height: 58px;
+}
+.nav_content div:nth-child(1){
+    float: left;
+    a{
+         color: #000000;
+        &:hover{
+             color: #d93732; 
+        }
     }
-//#talkBox a {
-//  display: inline-block;
-//  width: 86px;
-//  height: 18px;
-//  text-align: center;
-//  line-height: 18px;
-//  border-radius: 10px;
-//  color: #666666;
-//  margin-left: 11px;
-//  border: 2px solid #979795; }
-//  #talkBox a:hover {
-//     }
+    
+}
+.nav_content div:nth-child(2){
+     float: right;
+    a{
+        color: #000000;
+        width: 90px;
+        border-radius: 16px;
+        height:20px;
+        text-align: center;
+        line-height: 20px;
+        display: inline-block;
+        margin-left: 5px;
+        border:1px solid #979795;
+        &:hover{
+              color: #d93732; 
+        }
+    }
+    
+}
+#shopingCart{
+    width: 1210px;
+    margin: 0 auto;
+//  overflow: hidden;
+    background: #FFFFFF;
+}
+//.clear{
+//  clear: both;
+//  height: 0;
+//  overflow: hidden;
+//}
+
+#shopingCart table{
+    width: 1210px;
+    height: 285px;
+    background:white;
+    font-size: 14px;
+    color: #333333;   
+}
+#numId{
+    width: 120px;
+    text-align: center;
+    line-height: 43px;
+    height: 43px;
+    border: 1px solid #f5f5f5;
+}
+#reduseBtn,#addBtn,#countSpan{
+    display: inline-block;
+    width:35px ;
+    height: 40px;
+}
+#reduseBtn,#addBtn{
+    color:#c8c5c5 ;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#goods{
+    padding-left: 80px;
+}
+
+#shopingCart table tr:nth-child(n){
+    border-bottom: 1px solid #f5f5f5;
+    
+}
+#shopingCart table tr:last-child td:nth-child(3) a{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    background: #d93732;
+    text-align: center;
+    color:#FFFFFF;
+    line-height: 40px;
+    
+}
+#shopingCart table tr:last-child td:nth-child(2) span{
+    color:#d93732 ;
+    margin-right: 5px;
+}
+#shopingCart table tr:last-child td:nth-child(1){
+   
+    a{
+       display: inline-block;
+        text-align: center;
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        color: black;  
+        span{
+              display: inline-block;
+        width:15px;
+        height: 15px;
+        margin-right: 5px;
+        background: url(../img/ico.png) no-repeat right -30px;  
+        }
+    }
+}
+#goodsInfo{
+    padding-left: 48px;
+    position: relative;
+    height: 130px;
+    padding-bottom: 0;
+    padding-top: 0;
+    a{
+       display: inline-block; 
+    }
+    p{
+       display: inline-block; 
+    }
+}
+#goodsDetail{
+    position: absolute;
+    left: 160px;
+    top: 12px;
+    padding-bottom: 30px;
+    a{
+         font-size: 16px;
+        color: #000000;
+        margin-bottom: 5px;
+    }
+    span{
+         line-height: 10px;
+        color: #666666;
+    }
+}

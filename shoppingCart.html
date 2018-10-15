@@ -5,71 +5,224 @@
 <title>Document</title>
 <link rel="shortcut icon" href=" img/bitbug_favicon.ico" />
 <link rel="stylesheet" type="text/css" href="css/iconfont.css">
-
 <link rel="stylesheet" type="text/css" href="css/public.css">
+<!--<link rel="stylesheet" type="text/css" href="css/login.css">-->
 <link rel="stylesheet" type="text/css" href="css/shoppingCart.css">
-
 </head>
 <body>
-<!-- header -->
-<div id="topBox"class="topBox" >
+<div class="topBox">
+		<!-- header -->
 	<header>
-		<!-- 导航 -->
-		<div>
+		<div id="">
 			<a href="#" id="linkA"></a>
-			<h4>我的购物车</h4>
-		</div>
-		<div>
-			<a href="#">登录/</a>
-			<a href="#">注册</a>
-			<a href="">浏览记录</a>
+			<span>我的购物车</span>
 		</div>
 		
-	</header>
+		<div id="">
+			<a href="#">登陆/</a>
+			<a href="">注册</a>
+			<a href="">浏览历史</a>
+		</div>	
+			
+			
+	</header>	
+		
 </div>
 	<!-- content -->
-<div id="contBox">
-	<div id="talkBox">
+<div id="contBox1" class="contBox1">
+	<div class="nav_content">
 		<div>
-			<a href="index.html">首页</a>
+			<a href="#">首页/</a>
 			<span>购物车</span>
 		</div>
 		<div>
 			<span>
-				服务热线：0755-86380505、0755-86380506 (8:00－24:00)
+			服务热线：0755-86380505、0755-86380506 (8:00－24:00)	
 			</span>
 			<a href="#">QQ在线交谈</a>
 		</div>
-		
 	</div>
-	<div class="goods">
-		
-	</div>
-</div>	
+	<div id="shopingCart">
 
-<!--footer-->
-<div class="ft1"></div>
-<div id="upTop">
-		<a href="#">
-			<i class="iconfont icon-qq"></i>
-		</a>
-		<a href="#" id="upBox">
-			<i class="iconfont icon-dingbu"></i>
-		</a>
+		<table rules="rows" rows="3" align="center" id="tab">
+			<tr height="68px" bordercolor="#f5f5f5" align="center" >				
+				<td width="603px" align="left" id="goods" >商品信息</td>
+				<td width="120px">单价</td>
+				<td width="120px"> 数量</td>
+				<td width="120px">库存</td>
+				<td width="120px">小计</td>
+				<td width="120px">操作</td>
+			</tr>
+			<tr bordercolor="#f5f5f5" align="center">
+				<td align="left" id="goodsInfo">
+					<a href="#" id="goodsLink"><img src="img/list_1.jpg" width="115px" height="115px"/></a>
+					<p id="goodsDetail">
+						<a href="#">幸福剪影</a><br />
+						<span>礼物款式:蒲公英的约<br>定个性定制:直接购买</span>
+					</p>
+				</td>
+				<td>$68.0</td>
+				<td >
+					<p id="numId">
+						<span id="reduseBtn" class="reduseBtn">-</span>
+						<span id="countSpan">1</span>
+						<span id="addBtn" class="addBtn">+</span>
+					</p>
+					
+				</td>
+				<td>有库存</td>
+				<td>$<span>68.0</span></td>
+				<td id="delId" class="delId"><img src="img/del.jpg" alt="" width="23px" height="20px" /></td>
+			</tr>
+		
+			<tr bordercolor="#f5f5f5" align="center">
+				<td align="left" id="goodsInfo">
+					<a href="#" id="goodsLink"><img src="img/list_1.jpg" width="115px" height="115px"/></a>
+					<p id="goodsDetail">
+						<a href="#">幸福剪影</a><br />
+						<span>礼物款式:蒲公英的约<br>定个性定制:直接购买</span>
+					</p>
+				</td>
+				<td>$68.0</td>
+				<td >
+					<p id="numId">
+						<span id="reduseBtn" class="reduseBtn">-</span>
+						<span id="countSpan">1</span>
+						<span id="addBtn" class="addBtn">+</span>
+					</p>
+					
+				</td>
+				<td>有库存</td>
+				<td>$<span>68.0</span></td>
+				<td id="delId" class="delId"><img src="img/del.jpg" alt="" width="23px" height="20px" /></td>
+			</tr>
+			<tr bordercolor="#f5f5f5" align="center">
+				<td align="left" id="goodsInfo">
+					<a href="#" id="goodsLink"><img src="img/list_1.jpg" width="115px" height="115px"/></a>
+					<p id="goodsDetail">
+						<a href="#">幸福剪影</a><br />
+						<span>礼物款式:蒲公英的约<br>定个性定制:直接购买</span>
+					</p>
+				</td>
+				<td>$68.0</td>
+				<td >
+					<p id="numId">
+						<span id="reduseBtn" class="reduseBtn">-</span>
+						<span id="countSpan">1</span>
+						<span id="addBtn" class="addBtn">+</span>
+					</p>
+					
+				</td>
+				<td>有库存</td>
+				<td>$<span>68.0</span></td>
+				<td id="delId" class="delId"><img src="img/del.jpg" alt="" width="23px" height="20px" /></td>
+			</tr>
+			<tr height="80px" id="tabFooter">
+				<td align="left"><a href="#" ><span></span>继续购物</a></td>
+				<td colspan="3" align="center"> 
+					共<span>1</span>件商品 &nbsp;合计：
+					<span>$</span>
+					<span id="totalPrice">68.0</span>
+				</td>
+				
+				<td colspan="2" align="center"><a href="#">去结帐</a></td>
+			</tr>
+		</table>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>	
+<div class="ft3">
+	
 </div>
+
+	<!-- footer -->
+<div class="footer_contant">
+	
+	<div class="contant">
+		<div class="contant_left">
+			<img src="img/f_1.jpg" width="704" height="194" >
+		</div>
+		<div class="contant_right">
+			<div>
+				<p>关注我们</p>
+				<p>
+					<a href="#"><i class="iconfont icon-weibo"></i></a>
+					<a href="#"><i class="iconfont icon-txweibo"></i></a>
+					<a href="#" id="link_wx"><i class="iconfont icon-wei_xing"></i>
+						<span id="wx">
+							
+						</span>
+					</a>
+					
+				</p>
+			</div>
+			<div>
+				<h1>0755-86380505</h1>
+				<p>周一至周日 8:00-24:00</p>
+				<a href="#">QQ在线交谈</a>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+	<footer>
+		<div class="footer_top" >
+			<ul>
+				<li>
+					<span><i class="iconfont icon-tuihuanhuobaozhang"></i></span>
+					<span>30天免费退换货</span>
+				</li>
+				<li>
+					<span><i class="iconfont icon-zhengpinbaozheng"></i></span>
+					<span>30天免费退换货</span>
+				</li>
+				<li>
+					<span><i class="iconfont icon-ziyingmianyunfei"></i></span>
+					<span>30天免费退换货</span>
+				</li>
+				<li>
+					<span><i class="iconfont icon-lipin"></i></span>
+					<span>30天免费退换货</span>
+				</li>
+			</ul>
+			
+		</div>
+		<div class="footer_center">
+			<p>© liwuyou.com
+			<a href="">粤ICP备10222238号-1</a>
+			</p>
+			<div>
+				<a href="#">关于我们</a>|
+				<a href="#">帮助中心</a>|
+				<a href="#">人才招聘</a>|
+				<a href="#">售后服务</a>|
+				<a href="#">配送与验收</a>|
+				<a href="#">联系我们</a>
+			</div>
+		</div>
+	</footer>
+<div id="upTop">
+	<a href="#">
+		<i class="iconfont icon-qq"></i>
+	</a>
+	<a href="#" id="upBox">
+		<i class="iconfont icon-dingbu"></i>
+	</a>
+</div>	
 </body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="js/public.js" ></script>
-<script src="js/cookieTools.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/shoppingCart.js" ></script>
 <script>
 $(function(){
 	//头部
-	
-	//主体部分
+//	$(".topBox").load("top.html");
+	//表单验证
 
 	// 底部
-	$(".ft1").load("footer.html");
+//	$(".ft3").load("footer.html");
 
 })
 </script>

@@ -1,7 +1,7 @@
 <?php 
 	header("Content-type;text/html;charset-utf-8");
 
-	$userphone=$_POST['userphone'];
+	$userphone=$_POST['username'];
 	$userpass-$_POST['userpass'];
 
 	$con=mysql_connect("localhost","root","root");
@@ -11,14 +11,14 @@
 		mysql_selectdb("mysqldb",$con);
 
 		//查询语句
-		$sqlstr="select * from user where userphone='$userpass'";
+		$sqlstr="select * from user where username='$username'";
 		$result=mysql_query($sqlstr);
 
 		$rows=mysql_num_rows($result);
 
 		if ($rows<=0) {
 			//可以添加
-			$sqlstr="insert into user(userphone,userpass) values('$userphone','$userpass')";
+			$sqlstr="insert into user(username,userpass) values('$username','$userpass')";
 
 			$result=mysql_query($sqlstr,$con);
 			if ($result==1) {

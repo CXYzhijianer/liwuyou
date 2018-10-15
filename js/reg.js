@@ -69,7 +69,7 @@ $(function(){
 	if (checkForm()) {
 		$("#regBtn").click(
 			function(){
-				let xhr=XMLHttpRequest();
+				let xhr=new XMLHttpRequest();
 				xhr.open("post","regCheck.php",true);
 				xhr.onreadystatechange=function(){
 					if (xhr.readyState==4&&xhr.status==200) {
@@ -78,22 +78,22 @@ $(function(){
 						if (str==0) {
 							$("#messageBox").css("display","block")
 							.html("注册失败服务器出错！");
-						} else if(str==-1){
+						}else if(str==-1){
 							$("#messageBox").css(
 								"display","block"
 							).html("此用户已经存在,检测是否记错电话号码");
+						}else{
+							location.href="index.html"
 						}
 					}
 				
 				}
 				//设置请求头
 				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-				let str="userphone="+$("#userphone").value+"&userpass="+$("#userpass").value;
+				let str="userphone="+$("#userphone")[0].value+"&userpass="+$("#userpass")[0].value;
 				xhr.send(str);
 			}
 		)
 	}
-
-	
 	
 })

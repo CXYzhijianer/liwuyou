@@ -4,10 +4,10 @@ var gulp = require("gulp");
 // var concat = require("gulp-concat");
 // var uglify = require("gulp-uglify");
 // var rename = require("gulp-rename");
-var sass = require("gulp-sass");
+//var sass = require("gulp-sass");
 
 
-let basepath = "D:\\phpStudy\\WWW\\liwuyou";
+let basepath = "D:\\phpStudy\\PHPTutorial\\WWW\\liwuyou";
 
 //1.定义一个复制文件的任务
 //task函数的第一个参数：copyHtml是任务名
@@ -33,6 +33,14 @@ gulp.task("copy-js",function(){
 gulp.task("copy-css",function(){
 	gulp.src("css/**/*")
 	.pipe(gulp.dest(basepath+"\\css"));
+});
+gulp.task("copy-font",function(){
+	gulp.src("font/**/*")
+	.pipe(gulp.dest(basepath+"\\font"));
+});
+gulp.task("copy-php",function(){
+	gulp.src("*.html")
+	.pipe(gulp.dest(basepath+"\\font"));
 });
 
 
@@ -65,18 +73,29 @@ gulp.task("copy-css",function(){
 // });
 
 // sass的编译
-gulp.task("sass",function(){
-	gulp.src("sass/*.scss")
-	.pipe(sass())
-	.pipe(gulp.dest(basepath+"\\css"));
+//gulp.task("sass",function(){
+//	gulp.src("sass/*.scss")
+//	.pipe(sass())
+//	.pipe(gulp.dest(basepath+"\\css"));
+//});
+// build全部
+gulp.task("build",["copy-html","copy-img","copy-js","copy-css","copy-font"],function(){
+	console.log("OK");
 });
 
 //监听
-gulp.task("watch",function(){
+gulp.task("watchall",function(){
 	//一旦index.html的内容发生改变，那么就立即执行任务copyHtml;
 	gulp.watch("*.html",["copy-html"]);
 	gulp.watch("img/**/*",["copy-img"]);
 	gulp.watch("js/**/*",["copy-js"]);
 	gulp.watch("css/**/*",["copy-css"]);
-	gulp.watch("css/**/*",["sass"]);
+	gulp.watch("font/**/*",["copy-font"]);
+	gulp.watch("*.php",["copy-font"]);
+//	gulp.watch("sass/**/*",["sass"]);
 });
+// gulp.task("build",["copy-html","copy-img"],function(){
+// 	console.log("o le");
+// });
+
+//监听

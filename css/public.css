@@ -40,7 +40,7 @@ img{
 	width:130px; 
 	background:#fff9aa;
 	 position:fixed; 
-	 left:74px;
+	 left:148px;
 	 top:94px;
 	 display:none; 
 	 z-index: 100;
@@ -203,7 +203,6 @@ input{
 	top: 7px;
 	width: 18px;
 	height: 18px;
-	/*border: 1px solid red;*/
 	border-radius: 50%;
 	background: url(../img/ico.png) -146px 4px;
 }
@@ -235,7 +234,7 @@ input{
 }
 #shopingCart_empty{
 	position: relative;
-	left: 15px;
+	right: 23px;
 	top: -30px;
 	z-index: 10;
 	width: 20px;
@@ -257,7 +256,7 @@ input{
 	height: 150px;
 	border:1px solid #ececec;
 	position: fixed;
-	right: 24px;
+	right:99px;
 	top: 80px;
 	z-index: 10;
 	background: white;
@@ -267,7 +266,7 @@ input{
 }
 #nav_empty{
 	position: fixed;
-	right: 90px;
+	right:168px;
 	top: 70px;
 	z-index: 10;
 	width: 30px;
@@ -487,34 +486,34 @@ footer{
 .footer_bottom{
 	margin: 0 auto;
 	/*padding-left: 90px;*/
-	width: 1210px;
+	width: 1218px;
 	height: 104px;
 	padding-top: 27px;
 
 }
 .footer_bottom div:nth-child(1){
-	padding-left: 28px;
+	padding-left: 8px;
 	float: left;
-	width: 990px;
+	width: 1083px;
 	height: 113px;
 }
 .footer_bottom div:nth-child(2){
 	float: right;
-	width: 190px;
+	width: 120px;
 	height: 113px;
 }
 .footer_bottom div:nth-child(2) img{
 	width: 128px;
 	height: 52px;
 	display: block;
-	margin-left: 33px;
+	margin-left: 10px;
 }
 .footer_bottom p,a{
-	font-size: 12px;
+	font-size: 10px;
 	color: #c3c3c3;
 }
 .footer_bottom a{
-	margin-right:1px;
+	/*margin-right:1px;*/
 	display: inline-block;
 	line-height: 20px;
 }
