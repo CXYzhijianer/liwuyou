@@ -79,9 +79,10 @@ $(function(){
 							$("#messageBox").css("display","block")
 							.html("注册失败服务器出错！");
 						}else if(str==-1){
-							$("#messageBox").css(
+							$(".messageBox").css(
 								"display","block"
 							).html("此用户已经存在,检测是否记错电话号码");
+//			alert("此用户已经存在")
 						}else{
 							location.href="index.html"
 						}

@@ -1,0 +1,83 @@
+[33mcommit 09331efca3291defb1c4bdc2ae75f9ed9af10e38[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Mon Oct 15 22:18:14 2018 +0800
+
+    第四次增改，增加了登录页面，修改了购物车
+
+[33mcommit 91172b547fe23e986018c06b91d70b07e46b8167[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Sat Oct 13 17:43:23 2018 +0800
+
+    第三增改，添加了注册页面
+
+[33mcommit 3e6f1ea51c27a97a4539248bbfbe64ac68cbb43d[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 22:34:16 2018 +0800
+
+    添加登录页面js
+
+[33mcommit e15e1ddbf8b1fb5982ad77722a81042c07e52b57[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 22:32:12 2018 +0800
+
+    css中使用sass编程设置登录页面样式
+
+[33mcommit 6f69b0bfcbeed9148cc8ed648d832ebee2dacb66[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 22:30:09 2018 +0800
+
+    未加数据库测试的登录页面
+
+[33mcommit be748bc3a4a62d268935ddfcc948852396950f6f[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 22:29:01 2018 +0800
+
+    这是分离出的页面底部
+
+[33mcommit aca330b016302433017af83e4cf3b50e45dc261b[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 22:27:57 2018 +0800
+
+    这是分离出的页面头部top.html
+
+[33mcommit c9f73add25943579607cbd16c6fab75596685c2b[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 11:53:37 2018 +0800
+
+    这是index.html所用图片
+
+[33mcommit b4135789d5c99c404e403a510c224ce3b30a2108[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 10:51:58 2018 +0800
+
+    这是字体小图标文件
+
+[33mcommit 098e9bcd81a04d36bc0b9cf546a4560323f5878a[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 10:50:45 2018 +0800
+
+    这是只有slider.ji和public.js、jquery
+
+[33mcommit 09d2a7e71db2074b616b0009ccca5bb2098a8f62[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 10:46:54 2018 +0800
+
+    这是为login.html添加sass来编程样式的文件
+
+[33mcommit e651c2ffd1905bb288475be80f8f8f565e5e2ad5[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 10:43:08 2018 +0800
+
+    这是未加效果的login.html
+
+[33mcommit f6fabbf79e6a8a82f6f109c77b0116ca81d8b60c[m
+Author: zhijianer <3010228705@qq.com>
+Date:   Fri Oct 12 10:41:37 2018 +0800
+
+    这是index.html第一个版本
+
+[33mcommit 09b41e7556a55c4dfc695558a216188b37ab1a67[m
+Author: CXYzhijianer <44047190+CXYzhijianer@users.noreply.github.com>
+Date:   Thu Oct 11 16:43:13 2018 +0800
+
+    Initial commit

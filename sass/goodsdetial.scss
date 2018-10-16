@@ -1,0 +1,132 @@
+.tow {
+  width: 100%;
+  background: #f5f5f5; }
+
+.nav_content {
+      width: 1210px;
+      height: 58px;
+      background: #f5f5f5;
+      margin: 0 auto;
+      font-size: 12px;
+      line-height: 58px; 
+      div:nth-child(1){
+          float: left; 
+          a{
+             color: #000000;  
+          }
+      }
+      div:nth-child(2){
+          float: right; 
+          a{
+               width: 90px;
+            border-radius: 16px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            display: inline-block;
+            margin-left: 5px;
+          }
+      }
+}
+.three{
+    width:100%;
+    height: 690px;
+}
+.goodsInfoBox{
+    width:1210px;
+    height: 634px;
+    margin: 0 auto;
+//  background: pink;
+    padding-top: 56px;
+    div:nth-child(1){
+         float: left;
+        width:75px;
+        height:625px ;
+        background: #acc;
+        img{
+              float: left;
+            margin-bottom: 13px;
+            border: 1px solid #f5f5f5;
+        }
+    }
+    div:nth-child(2){
+        float: left;
+        width:635px;
+        height: 625px;
+        background: green;
+        position: relative;
+        img{
+             position: absolute;
+            left:64px;
+            top: 0;
+            display:inline-block ;
+        }
+    }
+}
+#introBox{
+        float: right;
+        width: 500px;
+        overflow: hidden;
+        h1{
+            line-height: 47px;
+            padding-bottom: 10px;
+        }
+        h3{
+            font-size: 14px;
+            color:#666666;
+            font-weight: 100;
+            line-height: 23px;
+            margin-bottom: 13px;
+        }
+       
+//    
+}
+.priceBox{
+    width: 498px;
+    height: 70px;
+    line-height: 70px;
+    border-bottom:1px solid #e6e6e6;
+    border-top:1px solid #e6e6e6;
+    span:nth-child(1){
+        display: inline-block;
+        float: left;
+        font-size: 24px;
+        color: #d93732;
+        
+    }
+    span:nth-child(2){
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        color:#666666;
+        
+    }
+}
+.indetify{
+    width: 429px;
+    height: 122px;
+    line-height: 122px;
+    font-size: 14px;
+      color:#666666;
+    span{
+        display: inline-block;
+        
+    }
+    a{
+        color:red;
+        line-height: 32px;
+        display:inline-block;
+        width: 232px;
+        height: 32px;
+        text-indent: 20px;
+        border:1px solid red;
+    }
+   
+}
+.buy{
+
+   width: 498px;
+   height: 71px;
+   background: red;
+   
+}

@@ -2,7 +2,7 @@
 	header("Content-type;text/html;charset-utf-8");
 
 	$userphone=$_POST['userphone'];
-	$userpass-$_POST['userpass'];
+	$userpass=$_POST['userpass'];
 
 	$con=mysql_connect("localhost","root","root");
 	if (!$con) {
