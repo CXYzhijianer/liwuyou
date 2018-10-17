@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Document</title>
+<title>商品详情</title>
 <link rel="shortcut icon" href=" img/bitbug_favicon.ico" />
 <link rel="stylesheet" type="text/css" href="css/iconfont.css">
 <link rel="stylesheet" type="text/css" href="css/public.css">
@@ -33,19 +33,19 @@
 </div>	
 <div class="three">
 	<div class="goodsInfoBox">
-		<div>
-			<img src="img/info_11.jpg" alt="" width="70px" height="70px"/>
-			<img src="img/info_12.jpg" alt="" width="70px" height="70px"/>
-			<img src="img/info_13.jpg" alt="" width="70px" height="70px"/>
-			<img src="img/info_14.jpg" alt="" width="70px" height="70px" />
-			<img src="img/info_15.jpg" alt="" width="70px" height="70px" />
+		<div class="imglistBox" id="imglistBox">
+			<ul id="imgList">
+				<li id="li1" class="li"></li>
+				<li id="li2" class="li"></li>
+				<li id="li3" class="li"></li>
+				<li id="li4" class="li"></li>
+				<li id="li5" class="li"></li>
+			</ul>	
 		</div>
-		<div>
-			<img src="img/info_11.jpg" alt="" width="500px" height="500px"/>
-			<img src="img/info_12.jpg" alt="" width="500px" height="500px"/>
-			<img src="img/info_13.jpg" alt="" width="500px" height="500px"/>
-			<img src="img/info_14.jpg" alt="" width="500px" height="500px" />
-			<img src="img/info_15.jpg" alt="" width="500px" height="500px" />
+		<div  class="showBox">
+			<div class="bigBox" id="bigBox">
+				
+			</div>
 		</div>
 		<div class="introBox" id="introBox">
 			<h1>趣奇俱乐部</h1>
@@ -73,14 +73,102 @@
 				</a>
 			</div>
 			<div class="buy">
-				<input type="button" value="直接购买"><a href="#"></a>
+				<input type="button" value="直接购买"><a href="#"><span></span></a>
+			</div>
+			<div class="seeMove">
+				<a href=""><span></span>查看更多同类商品</a>
 			</div>
 		</div>
 	</div>
+	<div class="nav_detail" id="nav_top">
+		<a href="#detail">礼物详情 </a>
+		<a href="#parameter">规格参数</a>
+		<a href="#evaluate">评价晒单(0)</a>
+		<a href="#consult">咨询 (0)</a>
+	</div>
 </div>
-	
-<!--content-->
+
+
 <div class="four">
+	<div class="giftdetial">
+		<div class="warm_tip">
+		当天下午3点前的订单当天发货；本品上海发货，默认韵达快递，无法代写贺卡，
+		不支持货到付款，7天无理由退换货（不影响第二次销售，包装不能拆），请谅解。
+		</div>
+		<img src="img/info_1.jpg" alt="" width="790px" height="903px"/>
+		<img src="img/info_2.jpg" alt="" width="790px" height="830px"/>
+		<img src="img/info_3.jpg" alt="" width="790px" height="929px"/>
+		<img src="img/info_4.jpg" alt=""  width="790px" height="929px"/>
+		<img src="img/info_5.jpg" alt="" width="790px" height="486px"/>
+		<img src="img/info_6.jpg" alt="" width="790px" height="926px" />
+		<img src="img/info_8.jpg" alt="" width="750px" height="1357px" />
+		<img src="img/info_7.jpg" alt="" width="750px" height="575px" />
+		<img src="img/info_9.jpg" alt="" width="750px" height="499px" />	
+	</div>
+	<div class="title">
+			<span>规格参数</span>
+	</div>
+	<div class="paramBox">
+		<ul>
+			<li>货号：LWY003877</li>
+			<li>名称：趣奇俱乐部</li>
+			<li>材质：橡胶木</li>
+			<li>积木数量：75块</li>
+			<li>产品尺寸：150x150x100mm</li>
+			<li>重量：1.06kg</li>
+			<li>推荐年龄：3岁以上</li>
+		</ul>
+	</div>
+	<div class="title">
+			<span>评价晒单</span>
+	</div>
+	
+	<div class="evalueBox">
+		<p class="evaluetatal"><a href="#"><b>所有评价(0)</b></a>  / <a href="">有晒单的评价(0)</a></p>
+		<ul>
+			<p>暂时没有评价</p>
+		</ul>
+	</div>
+	<div class="title">
+		<span>商品咨询</span>
+		
+	</div>
+	<div class="requireBox">
+		<div class="">
+			<input type="" name="" id="" value="" /><a href="">发表咨询</a>
+		</div>
+
+		<ul>
+		
+		</ul>
+		<div class="watchquest">
+			<a href="#">查看全部0个提问</a>
+		</div>
+	</div>
+	<div class="title">
+			<span>猜你喜欢</span>
+	</div>
+	<div class="list_slider">
+		<div class="item_list">
+			<ul>
+				<li>
+					<a href="#" id="link_1"  >
+						<img src="img/c_list_1.jpg" width="180px" height="180px">
+					</a>
+					<p>
+						<a href="#">无忧狗</a>
+					</p>
+					<p>￥99.0</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="f6" class="f6">
+	
+</div>
+<!--content-->
+<div id="four">
 	
 </div>
 	<div id="upTop">
@@ -91,13 +179,40 @@
 			<i class="iconfont icon-dingbu"></i>
 		</a>
 	</div>	
+<!--顶部-->
+
+<div class="headerBox" id="headerBox">
+	<div class="nav_detail" id="detail_header">
+		<a href="#detail">礼物详情 </a>
+		<a href="#parameter">规格参数</a>
+		<a href="#evaluate">评价晒单(0)</a>
+		<a href="#consult">咨询 (0)</a>
+		<span>需要帮助？</span><a href="#">QQ在线交谈</a>
+	</div>
+</div>
+
+
 </body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="js/public.js" ></script>
+ <script type="text/javascript" src="js/getStyle.js"></script> 
 <script type="text/javascript" src="js/goodsdetail.js" ></script>
 <script type="text/javascript">
 	$(function(){
+		//头部
 		$("#topBox").load("top.html");
+		//划过
+		let liDoms = $(".li");
+		for(let i=0;i<liDoms.length;i++){
+			$(liDoms[i]).hover(function(){
+				let bgImg = getStyle(this,"backgroundImage");
+//				console.log(bgImg)
+				$(".bigBox")[0].style.backgroundImage = bgImg;
+				
+			})
+		}
+		//底部
+		$("#f6").load("footer.html");
 	})
 </script>

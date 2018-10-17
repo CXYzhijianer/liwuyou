@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			/*每张图片宽：200，高：200*/
+			#box{
+				position:relative;
+				width:600px;
+				height:200px;
+				/*overflow:hidden;*/
+				overflow: hidden;
+			}
+			
+			#moverBox{
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:1600px;
+				height:200px;
+			}
+			
+			img{
+				float:left;
+				width:200px;
+				height:200px;
+			}	
+		</style>
+	</head>
+	<body style="height:1000px">
+		<div id="box">
+			<div id="moverBox">
+				<img src="img/timg0.jpg" />
+				<img src="img/timg1.jpg" />
+				<img src="img/timg2.jpg" />
+				<img src="img/timg3.jpg" />
+				<img src="img/timg4.jpg" />
+				<img src="img/timg0.jpg" />
+				<img src="img/timg1.jpg" />
+				<img src="img/timg2.jpg" />
+			</div>
+		</div>
+		<input id="btn01" type="button" value="  走  " />
+	</body>
+</html>
+<script type="text/javascript" src="js/getStyle.js"></script>
+<script type="text/javascript" src="js/mover180506.js"></script>
+<script type="text/javascript">
+
+function $(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+
+let currLeft = 0;
+let myTimer = null;
+
+//自动播放
+function playImg(){
+	
+	myTimer = setInterval(function(){
+		//1、数据：
+		//1)、改变left
+		currLeft-=5;
+		//2)、边界
+		if(currLeft<=-1000){
+			currLeft=0;
+		}
+		
+		//2、外观：
+		$("#moverBox").style.left = currLeft+"px";
+	},20);
+}
+
+//停止播放
+function stopImg(){
+	window.clearInterval(myTimer);
+}
+
+window.onload = function(){
+	playImg();
+	$("#box").onmouseover = stopImg;
+	$("#box").onmouseout = playImg;
+}
+
+</script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+	</body>
+</html>
+<script type="text/javascript">
+
+function $(id){
+	return document.getElementById(id);
+}
+window.onload = function(){
+	//testf();
+	/*
+	let str = "   a   b   c    ";
+	console.log(str.length);
+	let result = trim(str);
+	console.log(result);
+	console.log(result.length);
+	*/
+	let str="<html><head></head></html>";
+	let resultStr="";
+	for(let i=0;i<str.length;i++){
+		resultStr += escapeHtml(str.charAt(i))
+	}
+	console.log(resultStr);
+	
+}
+
+ //有这样一个URL：
+ // http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e 
+ //请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，
+ //将其按key-value形式返回到一个json结构中，
+ //如{a:'1', b:'2', c:'', d:'xxx', e:undefined}。
+ 
+ function testf(){
+	var str="http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e";
+	
+	//1、先把问号后面的字符串拿出来
+	let paramStr = str.split("?")[1];//a=1&b=2&c=&d=xxx&e 
+	//2、把paramStr用&分割成数组
+	let arr = paramStr.split("&");//["a=1","b=2","c=","d=xxx","e"];
+	
+	//3、产生json
+	let obj={};
+	for(let i=0;i<arr.length;i++){//arr[i]
+		if(arr[i].includes("=")==false){
+			obj[arr[i]] = undefined;
+		}else{
+			var subArr = arr[i].split("=");//["a","1"];
+			obj[subArr[0]] = subArr[1];
+		}		
+	}
+	
+	console.log(obj);
+	
+ }
+
+ //1.	写一个function，清除字符串前后的空格
+ //参数：字符串
+ //返回值：清除空格后的字符串
+function trim(str){
+	let tempStr = str.replace(/^\s+/,"")
+	tempStr = tempStr.replace(/\s+$/,"");
+	return tempStr;
+	//return str.replace(/^\s+/,"").replace(/\s+$/,"");
+} 
+
+/*
+为了保证页面输出安全，我们经常需要对一些特殊的
+字符进行转义，
+请写一个函数escapeHtml，
+将<, >, &, “进行转义 &lt;  &gt;  &amp; &quot;
+
+参数：字符串（如：<）
+返回值：字符串(如：&lt;)
+
+*/
+/*
+function escapeHtml(str){
+	switch(str){
+		case "<":return "&lt";
+		case ">":return "&gt";
+		case "&":return "&amp";
+		case '"':return "&quot";
+		default: return str;
+	}
+}
+*/
+
+function escapeHtml(str){// <
+	let obj = {
+		"<":"&lt",
+	    ">":"&gt",
+	    "&":"&amp",
+	    '"':"&quot"
+	}
+	if(obj[str]==undefined){
+		return str;
+	}
+	return obj[str];
+}
+
+
+ 
+ 
+
+</script>

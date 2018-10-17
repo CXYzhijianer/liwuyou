@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			#box{
+				position:relative;
+				width:500px;
+				height:400px;
+				
+			}
+			
+			img{
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:500px;
+				height:400px;
+				z-index:0;
+			}
+			
+			img:nth-child(1){
+				z-index:1;
+			}
+			
+			ul{
+				position:absolute;
+				right:50px;
+				bottom:10px;
+				list-style:none;	
+				z-index:2;
+			}
+			
+			ul li{
+				float:left;
+				margin-left:20px;
+				width:20px;
+				height:20px;
+				border-radius:50%;
+				background-color:pink;				
+			}
+			li:nth-child(1){
+				background-color:red;				
+			}
+		</style>
+	</head>
+	<body style="height:1000px">
+		<div id="box">
+			<img src="img/timg0.jpg" />
+			<img src="img/timg1.jpg" />
+			<img src="img/timg2.jpg" />
+			<img src="img/timg3.jpg" />
+			<img src="img/timg4.jpg" />
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<input id="btn01" type="button" value="  走  " />
+	</body>
+</html>
+<script type="text/javascript">
+
+function $(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+
+//当前序号
+let currOrd = 0;
+let myTimer = null;
+
+function showImg(){
+	//  A、改图片
+	let imgDoms = $("img");
+	for(let i=0;i<imgDoms.length;i++){
+		imgDoms[i].style.zIndex = 0;
+	}
+	imgDoms[currOrd].style.zIndex = 1;
+	//    B、改豆豆		
+	let liDoms = $("li");
+	for(let i=0;i<liDoms.length;i++){
+		liDoms[i].style.backgroundColor = "pink";
+	}
+	liDoms[currOrd].style.backgroundColor = "red";
+}
+
+//1、自动播放图片
+function changeImg(){
+
+	myTimer = setInterval(function(){
+		//1）、数据：改变图片的当前序号（加加），并考虑边界
+		//currOrd = ++currOrd>4?0:currOrd;
+		currOrd++;
+		if(currOrd>4){
+			currOrd=0;
+		}
+		
+		//2）、外观：
+		showImg();
+	},1000);
+}
+
+//2、停止播放
+function stopChange(){
+	//停止定时器
+	window.clearInterval(myTimer);
+}
+
+//3、继续播放 就是自动播放
+
+//4、跳转到指定的图片
+function goImg(transOrd){
+	//1）、数据：把transOrd赋给当前图片序号
+	currOrd = transOrd;
+	
+	//2）、外观：
+	showImg();
+}
+
+window.onload = function(){
+	changeImg();
+	$("#box").onmouseover = stopChange;
+	$("#box").onmouseout = changeImg;
+	let liDoms = $("li");
+	for(var i=0;i<liDoms.length;i++){
+		liDoms[i].setAttribute("index",i);
+		liDoms[i].onclick = function(){
+			let index = parseInt(this.getAttribute("index"));
+			goImg(index);
+		}
+	}
+}
+
+</script>

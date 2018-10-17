@@ -80,10 +80,19 @@ window.onscroll=function(){
 		var _top = document.body.scrollTop || document.documentElement.scrollTop;	
 		//3临界显示与隐藏
 		if (_top>=100) {
+//			$("#headerBox")[0].style.display="block";
 			boxUp.style.display="block"
 		}else{
 			boxUp.style.display="none";
+//			$("#headerBox")[0].style.display="none";
 		}
+		
+		if (_top>=673) {
+			$("#headerBox")[0].style.display="block";
+		} else{
+			$("#headerBox")[0].style.display="none";
+		}
+		
 		// 4添加点击事件
 		$("#upBox")[0].onclick=function(){
 			document.body.scrollTop = document.documentElement.scrollTop = 0;

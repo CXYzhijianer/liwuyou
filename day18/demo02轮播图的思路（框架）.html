@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			#box{
+				position:relative;
+				width:500px;
+				height:400px;
+				
+			}
+			
+			img{
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:500px;
+				height:400px;
+			}
+			
+			ul{
+				position:absolute;
+				right:50px;
+				bottom:10px;
+				list-style:none;				
+			}
+			
+			ul li{
+				float:left;
+				margin-left:20px;
+				width:20px;
+				height:20px;
+				border-radius:50%;
+				background-color:pink;				
+			}
+		</style>
+	</head>
+	<body style="height:1000px">
+		<div id="box">
+			<img src="img/timg0.jpg" />
+			<img src="img/timg1.jpg" />
+			<img src="img/timg2.jpg" />
+			<img src="img/timg3.jpg" />
+			<img src="img/timg4.jpg" />
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<input id="btn01" type="button" value="  走  " />
+	</body>
+</html>
+<script type="text/javascript" src="js/getStyle.js"></script>
+<script type="text/javascript" src="js/mover180506.js"></script>
+<script type="text/javascript">
+
+function $(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+
+//1、自动播放图片
+function changeImg(){
+	//1）、数据：改变图片的当前序号（加加），并考虑边界
+	
+	//2）、外观：
+	//    A、改图片
+	//    B、改豆豆
+}
+
+//2、停止播放
+function stopChange(){
+	//停止定时器
+}
+
+//3、继续播放 就是自动播放
+
+//4、跳转到指定的图片
+function goImg(transOrd){
+	//1）、数据：把transOrd赋给当前图片序号
+	
+	//2）、外观：
+	//    A、改图片
+	//    B、改豆豆
+	
+}
+
+
+
+</script>

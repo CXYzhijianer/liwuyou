@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			
+			#bigBox{
+				position:relative;
+				width:500px;
+				height:340px;
+				background-image:url(img/01.jpg);
+				background-size:500px 340px;
+			}
+			
+			/*#mirrorBox{
+				position:absolute;
+				left:100px;
+				top:120px;
+				width:100px;
+				height:80px;
+				background-color:pink;
+				opacity:0.5;
+				display:none;
+			}
+			
+			#showBox{
+				position:absolute;
+				left:510px;
+				top:0px;
+				width:300px;
+				height:240px;
+				background-image:url(img/01.jpg);
+				background-size:1500px 1020px;
+				background-position:-100px -120px;
+				display:none;
+			}*/
+			
+			ul{
+				list-style: none;
+			}			
+			
+			ul li{
+				display: block;
+				width: 80px;
+				height: 80px;
+				float: left;
+				margin: 10px;
+				background-size: cover;
+			}
+			ul li:nth-child(1){
+				background-image: url(img/01.jpg);
+			}
+			ul li:nth-child(2){
+				background-image: url(img/02.jpg);
+			}
+			ul li:nth-child(3){
+				background-image: url(img/03.jpg);
+			}
+			ul li:nth-child(4){
+				background-image: url(img/04.jpg);
+			}
+		</style>
+	</head>
+	<body style="height:1000px">
+		<div id="bigBox">
+			<!--<div id="mirrorBox">
+			</div>
+			<div id="showBox">
+			</div>-->
+		</div>
+		<ul id="imgList">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript" src="js/getStyle.js"></script>
+<script type="text/javascript" src="js/eventTools.js"></script>
+<script type="text/javascript" src="js/mover180506.js"></script>
+<script type="text/javascript">
+
+function $(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+
+//放大效果
+//function scale1(evt){
+//		//1、数据（放大镜的left和top）
+//		let left1 = evt.pageX-$("#bigBox").offsetLeft-50;
+//		let top1 = evt.pageY-$("#bigBox").offsetTop-40;
+//		
+//		if(left1<0){
+//			left1=0;
+//		}else if(left1>500-100){
+//			left1 = 500-100;
+//		}
+//		
+//		if(top1<0){
+//			top1=0;
+//		}else if(top1>340-80){
+//			top1 = 340-80;
+//		}
+//		
+//		//2、外观
+//		$("#mirrorBox").style.left = left1+"px";
+//		$("#mirrorBox").style.top = top1+"px";
+//		
+//		$("#showBox").style.backgroundPosition = (-3*left1)+"px "+(-3*top1)+"px";
+//}	
+
+window.onload = function(){
+	$("#bigBox").onmouseover = function(){
+		$("#mirrorBox").style.display = "block";
+		$("#showBox").style.display = "block";
+	}
+	
+	$("#bigBox").onmouseout = function(){
+		$("#mirrorBox").style.display = "none";
+		$("#showBox").style.display = "none";
+	}
+	$("#bigBox").onmousemove = function(event){
+		let evt = event || window.event;
+		scale1(evt);
+	}
+	
+	let liDoms = $("li");
+	for(let i=0;i<liDoms.length;i++){
+		liDoms[i].onclick = function(){
+			let bgImg = getStyle(this,"backgroundImage");
+			$("#bigBox").style.backgroundImage = bgImg;
+			$("#showBox").style.backgroundImage = bgImg;
+		}
+	}
+}
+
+</script>

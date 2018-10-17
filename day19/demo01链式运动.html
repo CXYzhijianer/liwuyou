@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			#box{
+				position:absolute;
+				left:0px;
+				top:100px;
+				width:20px;
+				height:20px;
+				background-color:pink;
+			}
+		</style>
+	</head>
+	<body style="height:1000px">
+		<div id="box">
+			
+			
+		</div>
+		<input id="btn01" type="button" value="  走  " />
+	</body>
+</html>
+<script type="text/javascript" src="js/getStyle.js"></script>
+<script type="text/javascript" src="js/eventTools.js"></script>
+<script type="text/javascript" src="js/mover180506.js"></script>
+<script type="text/javascript">
+
+function $(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+
+
+window.onload = function(){
+	$("#btn01").onclick = function(){
+		moveObj04($("#box"),"left",500,1000,function(){
+			moveObj04($("#box"),"top",500,1000,function(){
+				moveObj04($("#box"),"width",500,1000,function(){
+					moveObj04($("#box"),"height",500,1000,null);
+				});
+			});
+		});
+	}
+}
+
+</script>
