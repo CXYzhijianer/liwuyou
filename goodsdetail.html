@@ -7,7 +7,6 @@
 <link rel="stylesheet" type="text/css" href="css/iconfont.css">
 <link rel="stylesheet" type="text/css" href="css/public.css">
 <link rel="stylesheet" type="text/css" href="css/goodsdetial.css">
-
 </head>
 <body>
 <!--<div class="first">-->
@@ -33,6 +32,7 @@
 </div>	
 <div class="three">
 	<div class="goodsInfoBox">
+		<!-- 图片效果 -->
 		<div class="imglistBox" id="imglistBox">
 			<ul id="imgList">
 				<li id="li1" class="li"></li>
@@ -43,22 +43,17 @@
 			</ul>	
 		</div>
 		<div  class="showBox">
+			<!-- 显示大图 -->
 			<div class="bigBox" id="bigBox">
 				
 			</div>
 		</div>
 		<div class="introBox" id="introBox">
-			<h1>趣奇俱乐部</h1>
-			<h3>从平面到立体，
-				从想象到逻辑，好的玩具是能激发孩子去思考，
-				去想象，去创造，而不是告诉孩子一个答案。
-				 趣奇俱乐部就是这样一个玩具，可以用这些积木搭出平面或立体的造型，
-				 也可以理解什么是对称，可以放开束缚去想象，可以拼搭，也可以讲故事。
-				 比艺术品更好玩的大概就是这个积木了！
+			<h1 id="goodsname"></h1>
+			<h3 id="goodsdesc">		
 			</h3>
 			<div class="priceBox">
-				<span>
-					￥800.0元
+				<span id="goodsprice">
 				</span>
 				<span>
 					有现货
@@ -197,6 +192,7 @@
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="js/public.js" ></script>
  <script type="text/javascript" src="js/getStyle.js"></script> 
+<script type="text/javascript" src="js/cookieTools.js"></script> 
 <script type="text/javascript" src="js/goodsdetail.js" ></script>
 <script type="text/javascript">
 	$(function(){
@@ -207,7 +203,6 @@
 		for(let i=0;i<liDoms.length;i++){
 			$(liDoms[i]).hover(function(){
 				let bgImg = getStyle(this,"backgroundImage");
-//				console.log(bgImg)
 				$(".bigBox")[0].style.backgroundImage = bgImg;
 				
 			})
@@ -215,4 +210,30 @@
 		//底部
 		$("#f6").load("footer.html");
 	})
+
+
+// 	$(function(){
+// 	//1、从cookie中读取商品编号goodsid
+// 	let goodsid = getCookie("goodsid");
+	
+// 	//2、发送ajax请求，获取商品信息
+// 	$.ajax({
+// 		type:"get",
+// 		url:"getGoodsInfo.php",
+// 		async:true,
+// 		data:{
+// 			"goodsId":goodsid
+// 		},
+// 		success:function(data){
+// //			$("#goodsname").html(data.goodsname);
+// //			$("#goodsprice").html(data.goodsprice);
+// //			$("#goodscount").html(data.goodscount);
+// //			$("#goodsimg").attr("src",data.goodsImg);
+// 		},
+// 		dataType:"json"
+// 	});	
+// });
+
+	
+	
 </script>

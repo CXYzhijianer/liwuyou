@@ -91,7 +91,7 @@ $(function(){
 				}
 				//设置请求头
 				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-				let str="userphone="+$("#userphone")[0].value+"&userpass="+$("#userpass")[0].value;
+				let str="userphone="+$("#userphone").val()+"&userpass="+$("#userpass").val();
 				xhr.send(str);
 			}
 		)

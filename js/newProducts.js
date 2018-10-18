@@ -89,3 +89,73 @@ $("#focusC").hover(
 
 
 });
+	//动态创建商品了,列表
+	//动态创建商品了,列表
+// $(function(){
+// 	//1、发送ajax请求，获取商品信息
+// 	$.ajax({
+// 		type:"get",
+// 		url:"getGoodsList.php",
+// 		async:true,
+// 		success:function(data){
+
+// 			var str='';
+// 			for(var i=0;i<data.length;i++){
+			
+// 				str+="<li>\
+// 				<a href=''>\
+// 					<img src='"+data[i].goodsImg+"' width='225px' height='225px'>\
+// 				</a>\
+// 				<p>\
+// 					<a href='#'>"+data[i].goodsName+"</a>\
+// 				</p>\
+// 				<p>$"+data[i].goodsPrice+"</p>\
+// 				<p><span>"+data[i].beiyong1+"</span></p>\
+// 			</li>"	
+// 			};
+// 			$(".goodlists").html(str);
+			
+// 		},
+// 		dataType:"json"
+// 	});	
+// });
+function goGoodsDetail(obj){
+	let goodsid = obj.getAttribute("goodsid");
+	addCookie("goodsid",goodsid);
+	// window.location.href="goodsdetail.html";
+	
+}
+//显示数据
+function showList(data){
+	var str='';
+	for(var i=0;i<data.length;i++){
+		str+="<li>\
+		<a href='goodsdetail.html'>\
+			<img goodsid='"+data[i].goodsId+"' src='"+data[i].goodsImg+"' width='225px' height='225px' onclick='goGoodsDetail(this)'>\
+		</a>\
+		<p>\
+			<a href='#'>"+data[i].goodsName+"</a>\
+		</p>\
+		<p>￥"+data[i].goodsPrice+"</p>\
+		<p><span>"+data[i].beiyong1+"</span></p>\
+	</li>";
+		$("#one")[0].innerHTML=str;
+	}
+}
+
+$(function(){
+	//1、发送ajax请求，获取商品信息
+	$.ajax({
+		type:"get",
+		url:"getGoodsList.php",
+		async:true,
+		success:function(data){
+			showList(data);	
+		},
+		dataType:"json"
+	});	
+});
+
+
+
+
